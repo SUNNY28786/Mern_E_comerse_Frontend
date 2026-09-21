@@ -31,7 +31,7 @@ const AppState = (props) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const api = await axios.get("http://localhost:1000/api/product/all");
+        const api = await axios.get(`${url}/product/all`);
         setproducts(api.data.products);
         setFilterData(api.data.products);
       } catch (err) {
@@ -54,7 +54,7 @@ const AppState = (props) => {
     setIsAuthenticated(true);
 
     try {
-      const api = await axios.get("http://localhost:1000/api/user/profile", {
+      const api = await axios.get(`${url}/user/profile`, {
         headers: {
           "Content-Type": "application/json",
           "Auth": currentToken, // Agar backend "Authorization: Bearer <token>" use karta hai to 'Auth' ki jagah Authorization likhein
@@ -80,7 +80,7 @@ const AppState = (props) => {
   // Register Function
   const register = async (name, email, password) => {
     try {
-      const api = await axios.post("http://localhost:1000/api/user/register", {
+      const api = await axios.post(`${url}/user/register`, {
         name,
         email,
         password,
@@ -112,7 +112,7 @@ const AppState = (props) => {
   // Login Function
   const login = async (email, password) => {
     try {
-      const api = await axios.post("http://localhost:1000/api/user/login", {
+      const api = await axios.post(`${url}/user/login`, {
         email,
         password,
       });
@@ -165,7 +165,7 @@ const AppState = (props) => {
       const currentToken = token || localStorage.getItem("token");
 
       const api = await axios.post(
-        "http://localhost:1000/api/cart/add",
+        `${url}/cart/add`,
         {
           productId,
           title,
@@ -222,7 +222,7 @@ const AppState = (props) => {
     try {
       const currentToken = token || localStorage.getItem("token");
 
-      const api = await axios.get("http://localhost:1000/api/cart/user", {
+      const api = await axios.get(`${url}/cart/user`, {
         headers: {
           "Content-Type": "application/json",
           Auth: currentToken,
@@ -244,7 +244,7 @@ const AppState = (props) => {
       const currentToken = token || localStorage.getItem("token");
 
       const api = await axios.post(
-        "http://localhost:1000/api/cart/--qty",
+        `${url}/cart/--qty`,
         {
           productId,
           qty,
@@ -274,7 +274,7 @@ const AppState = (props) => {
       console.log("Token:", currentToken);
 
       const api = await axios.delete(
-        `http://localhost:1000/api/cart/remove/${productId}`,
+        `${url}/cart/remove/${productId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -303,7 +303,7 @@ const AppState = (props) => {
       console.log("Token:", currentToken);
 
       const api = await axios.delete(
-        "http://localhost:1000/api/cart/clear",
+        `${url}/cart/clear`,
         {
           headers: {
             Auth: currentToken,
@@ -351,7 +351,7 @@ const AppState = (props) => {
       });*/
 
       const api = await axios.post(
-        "http://localhost:1000/api/address/add",
+        `${url}/address/add`,
         {
           fullName,
           country,
@@ -402,7 +402,7 @@ const AppState = (props) => {
       const currentToken = token || localStorage.getItem("token");
 
       const api = await axios.get(
-        "http://localhost:1000/api/address/get",
+        `${url}/address/get`,
         {
           headers: {
             Auth: currentToken,
