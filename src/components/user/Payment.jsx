@@ -105,7 +105,7 @@ const Payment = () => {
             // ==========================================
 
             const response = await fetch(
-                "http://localhost:1000/api/payment/checkout",
+                `${url}/payment/checkout`,
                 {
                     method: "POST",
 
@@ -184,7 +184,7 @@ const Payment = () => {
 
                         const verifyResponse =
                             await fetch(
-                                "http://localhost:1000/api/payment/verify",
+                                `${url}/payment/verify`,
                                 {
                                     method: "POST",
 
