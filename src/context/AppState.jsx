@@ -31,6 +31,7 @@ const AppState = (props) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
+
         const api = await axios.get(`${url}/product/all`);
         setproducts(api.data.products);
         setFilterData(api.data.products);
