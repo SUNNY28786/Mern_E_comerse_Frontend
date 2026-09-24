@@ -17,6 +17,13 @@ import {
   ArrowRight,
   ChevronDown,
   ArrowUp,
+  Smartphone,
+  Laptop,
+  Tablet,
+  Camera,
+  Sparkles,
+  IndianRupee,
+
 } from "lucide-react";
 
 const Navbar = () => {
@@ -594,94 +601,186 @@ const Navbar = () => {
       {/* =====================================================
           HOMEPAGE FILTERS
       ===================================================== */}
-
       {location.pathname === "/" && (
-        <div className="filter-bar">
-
+        <div className="filter-bar bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border-b border-purple-100 shadow-sm">
           <div className="max-w-[1400px] mx-auto px-3 sm:px-5">
-
             <div className="flex items-center gap-2 overflow-x-auto py-2.5 scrollbar-hide">
 
+              {/* ALL */}
               <button
                 type="button"
                 onClick={filterAll}
-                className="filter-pill active-filter"
+                className="filter-pill active-filter
+            bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600
+            text-white font-semibold
+            border border-transparent
+            shadow-md shadow-pink-300/50
+            hover:shadow-lg hover:shadow-pink-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
+                <Sparkles size={16} strokeWidth={2.2} />
                 All
               </button>
 
+              {/* MOBILES */}
               <button
                 type="button"
-                onClick={() =>
-                  filterCategory("Mobiles")
-                }
-                className="filter-pill"
+                onClick={() => filterCategory("Mobiles")}
+                className="filter-pill
+            bg-white text-black font-medium
+            border border-gray-200
+            hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-blue-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
+                <Smartphone size={16} strokeWidth={2.2} />
                 Mobiles
               </button>
 
+              {/* LAPTOPS */}
               <button
                 type="button"
-                onClick={() =>
-                  filterCategory("Laptops")
-                }
-                className="filter-pill"
+                onClick={() => filterCategory("Laptops")}
+                className="filter-pill
+            bg-white text-black font-medium
+            border border-gray-200
+            hover:bg-gradient-to-r hover:from-emerald-600 hover:to-teal-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-emerald-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
+                <Laptop size={16} strokeWidth={2.2} />
                 Laptops
               </button>
 
+              {/* TABLETS */}
               <button
                 type="button"
-                onClick={() =>
-                  filterCategory("Tablets")
-                }
-                className="filter-pill"
+                onClick={() => filterCategory("Tablets")}
+                className="filter-pill
+            bg-white text-black font-medium
+            border border-gray-200
+            hover:bg-gradient-to-r hover:from-violet-600 hover:to-fuchsia-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-violet-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
+                <Tablet size={16} strokeWidth={2.2} />
                 Tablets
               </button>
 
+              {/* CAMERAS */}
               <button
                 type="button"
-                onClick={() =>
-                  filterCategory("Cameras")
-                }
-                className="filter-pill"
+                onClick={() => filterCategory("Cameras")}
+                className="filter-pill
+            bg-white text-black font-medium
+            border border-gray-200
+            hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-amber-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
+                <Camera size={16} strokeWidth={2.2} />
                 Cameras
               </button>
 
-              <div className="filter-divider" />
+              <div className="filter-divider w-px h-6 bg-gradient-to-b from-transparent via-purple-300 to-transparent mx-1 shrink-0" />
 
+              {/* ₹39,999+ */}
               <button
                 type="button"
                 onClick={() => filterPrice(39999)}
-                className="filter-pill price-pill"
+                className="filter-pill price-pill
+            bg-gradient-to-r from-rose-300 to-pink-300
+          text-black
+           border border-rose-300
+            hover:from-rose-600 hover:to-pink-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-rose-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
-                ₹39,999+
+                <IndianRupee size={15} strokeWidth={2.5} />
+                39,999+
               </button>
 
+              {/* ₹49,999+ */}
               <button
                 type="button"
                 onClick={() => filterPrice(49999)}
-                className="filter-pill price-pill"
+                className="filter-pill price-pill
+            bg-gradient-to-r from-sky-100 to-blue-100
+            text-black font-semibold
+            border border-sky-200
+            hover:from-sky-600 hover:to-blue-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-sky-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
-                ₹49,999+
+                <IndianRupee size={15} strokeWidth={2.5} />
+                49,999+
               </button>
 
+              {/* ₹65,999+ */}
               <button
                 type="button"
                 onClick={() => filterPrice(65999)}
-                className="filter-pill price-pill"
+                className="filter-pill price-pill
+            bg-gradient-to-r from-sky-300 to-blue-300
+            text-black
+            border border-sky-300
+            hover:from-emerald-600 hover:to-green-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-emerald-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
-                ₹65,999+
+                <IndianRupee size={15} strokeWidth={2.5} />
+                65,999+
               </button>
 
+              {/* ₹80,000+ */}
               <button
                 type="button"
                 onClick={() => filterPrice(80000)}
-                className="filter-pill price-pill"
+                className="filter-pill price-pill
+           bg-gradient-to-r from-purple-300 to-fuchsia-300
+           text-black
+           border border-purple-300
+            hover:from-purple-600 hover:to-fuchsia-600
+            hover:text-white hover:border-white
+            hover:shadow-md hover:shadow-purple-400/60
+            hover:scale-105 active:scale-95
+            transition-all duration-300
+            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+            flex items-center gap-1.5"
               >
-                ₹80,000+
+                <IndianRupee size={15} strokeWidth={2.5} />
+                80,000+
               </button>
             </div>
           </div>
