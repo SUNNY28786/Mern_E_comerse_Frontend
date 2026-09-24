@@ -3,6 +3,7 @@ import Showproduct from "./components/product/Showproduct";
 import ProductDetail from "./components/product/ProductDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/user/Navbar";
+import Footer from "./components/user/Footer";
 import SearchProduct from "./components/product/SearchProduct";
 import Login from "./components/user/Login";
 import Profile from "./components/user/Profile";
@@ -40,11 +41,11 @@ const App = () => {
         <Route path="/payment" element={Payment}>
 
 
-
         </Route>
 
 
       </Routes>
+      <Footer />
     </Router>
   );
 };

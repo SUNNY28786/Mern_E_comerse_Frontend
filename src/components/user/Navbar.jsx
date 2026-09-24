@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import AppContext from "../../context/AppContext";
+import Bannerslidder from "./bannerslidder"
 
 
 
@@ -704,80 +705,84 @@ const Navbar = () => {
               <div className="filter-divider w-px h-6 bg-gradient-to-b from-transparent via-purple-300 to-transparent mx-1 shrink-0" />
 
               {/* ₹39,999+ */}
+
               <button
                 type="button"
                 onClick={() => filterPrice(39999)}
                 className="filter-pill price-pill
-            bg-gradient-to-r from-rose-300 to-pink-300
-          text-black
-           border border-rose-300
-            hover:from-rose-600 hover:to-pink-600
-            hover:text-white hover:border-white
-            hover:shadow-md hover:shadow-rose-400/60
-            hover:scale-105 active:scale-95
-            transition-all duration-300
-            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
-            flex items-center gap-1.5"
+    bg-gradient-to-r from-pink-100 to-white
+    text-pink-700 font-semibold
+    border border-pink-200
+    hover:from-pink-500 hover:to-rose-500
+    hover:text-white hover:border-white
+    hover:shadow-md hover:shadow-pink-400/60
+    hover:scale-105 active:scale-95
+    transition-all duration-300
+    rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+    flex items-center gap-1.5"
               >
                 <IndianRupee size={15} strokeWidth={2.5} />
                 39,999+
               </button>
 
               {/* ₹49,999+ */}
+
               <button
                 type="button"
                 onClick={() => filterPrice(49999)}
                 className="filter-pill price-pill
-            bg-gradient-to-r from-sky-100 to-blue-100
-            text-black font-semibold
-            border border-sky-200
-            hover:from-sky-600 hover:to-blue-600
-            hover:text-white hover:border-white
-            hover:shadow-md hover:shadow-sky-400/60
-            hover:scale-105 active:scale-95
-            transition-all duration-300
-            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
-            flex items-center gap-1.5"
+    bg-gradient-to-r from-pink-100 to-white
+    text-pink-700 font-semibold
+    border border-pink-200
+    hover:from-pink-500 hover:to-rose-500
+    hover:text-white hover:border-white
+    hover:shadow-md hover:shadow-pink-400/60
+    hover:scale-105 active:scale-95
+    transition-all duration-300
+    rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+    flex items-center gap-1.5"
               >
                 <IndianRupee size={15} strokeWidth={2.5} />
                 49,999+
               </button>
+
 
               {/* ₹65,999+ */}
               <button
                 type="button"
                 onClick={() => filterPrice(65999)}
                 className="filter-pill price-pill
-            bg-gradient-to-r from-sky-300 to-blue-300
-            text-black
-            border border-sky-300
-            hover:from-emerald-600 hover:to-green-600
-            hover:text-white hover:border-white
-            hover:shadow-md hover:shadow-emerald-400/60
-            hover:scale-105 active:scale-95
-            transition-all duration-300
-            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
-            flex items-center gap-1.5"
+    bg-gradient-to-r from-pink-100 to-white
+    text-pink-700 font-semibold
+    border border-pink-200
+    hover:from-pink-500 hover:to-rose-500
+    hover:text-white hover:border-white
+    hover:shadow-md hover:shadow-pink-400/60
+    hover:scale-105 active:scale-95
+    transition-all duration-300
+    rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+    flex items-center gap-1.5"
               >
                 <IndianRupee size={15} strokeWidth={2.5} />
                 65,999+
               </button>
 
               {/* ₹80,000+ */}
+
               <button
                 type="button"
                 onClick={() => filterPrice(80000)}
                 className="filter-pill price-pill
-           bg-gradient-to-r from-purple-300 to-fuchsia-300
-           text-black
-           border border-purple-300
-            hover:from-purple-600 hover:to-fuchsia-600
-            hover:text-white hover:border-white
-            hover:shadow-md hover:shadow-purple-400/60
-            hover:scale-105 active:scale-95
-            transition-all duration-300
-            rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
-            flex items-center gap-1.5"
+    bg-gradient-to-r from-pink-100 to-white
+    text-pink-700 font-semibold
+    border border-pink-200
+    hover:from-pink-500 hover:to-rose-500
+    hover:text-white hover:border-white
+    hover:shadow-md hover:shadow-pink-400/60
+    hover:scale-105 active:scale-95
+    transition-all duration-300
+    rounded-full px-4 py-1.5 text-sm whitespace-nowrap cursor-pointer
+    flex items-center gap-1.5"
               >
                 <IndianRupee size={15} strokeWidth={2.5} />
                 80,000+
@@ -786,7 +791,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-
+      {location.pathname === "/" && <Bannerslidder />}
       {/* =====================================================
           MOBILE FLOATING CART
       ===================================================== */}
