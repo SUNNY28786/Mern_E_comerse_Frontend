@@ -425,75 +425,75 @@ const Payment = () => {
         return (
 
             <div className="
-                min-h-screen
-                bg-[#070d18]
-                flex
-                items-center
-                justify-center
-                px-4
-            ">
-
-                <div className="
-                    w-full
-                    max-w-md
-                    bg-[#151c2c]
-                    border
-                    border-gray-800
-                    rounded-2xl
-                    p-8
-                    text-center
-                    text-white
+                    min-h-screen
+                    bg-[#070d18]
+                    flex
+                    items-center
+                    justify-center
+                    px-4
                 ">
 
-                    <div className="
-                        w-20
-                        h-20
-                        mx-auto
-                        rounded-full
-                        bg-green-500/10
-                        flex
-                        items-center
-                        justify-center
-                        text-5xl
-                        mb-5
+                <div className="
+                        w-full
+                        max-w-md
+                        bg-[#151c2c]
+                        border
+                        border-gray-800
+                        rounded-2xl
+                        p-8
+                        text-center
+                        text-white
                     ">
+
+                    <div className="
+                            w-20
+                            h-20
+                            mx-auto
+                            rounded-full
+                            bg-green-500/10
+                            flex
+                            items-center
+                            justify-center
+                            text-5xl
+                            mb-5
+                        ">
                         ✓
                     </div>
 
 
                     <h1 className="
-                        text-2xl
-                        font-bold
-                        text-green-400
-                    ">
+                            text-2xl
+                            font-bold
+                            text-green-400
+                        ">
                         Payment Successful
                     </h1>
 
 
                     <p className="
-                        text-gray-400
-                        text-sm
-                        mt-3
-                    ">
+                            text-gray-400
+                            text-sm
+                            mt-3
+                        ">
                         Your payment has been
                         successfully verified.
                     </p>
 
 
                     <div className="
-                        mt-6
-                        bg-[#0d1424]
-                        rounded-xl
-                        p-4
-                        text-left
-                    ">
+                            mt-6
+                            bg-[#0d1424]
+                            rounded-xl
+                            p-4
+                            text-left
+                        ">
 
                         <div className="
-                            flex
-                            justify-between
-                            gap-3
-                            text-sm
-                        ">
+                                flex
+                                justify-between
+                                gap-3
+                                text-sm
+                            ">
 
                             <span className="text-gray-500">
                                 Amount
@@ -507,23 +507,23 @@ const Payment = () => {
 
 
                         <div className="
-                            flex
-                            justify-between
-                            gap-3
-                            text-sm
-                            mt-3
-                        ">
+                                flex
+                                justify-between
+                                gap-3
+                                text-sm
+                                mt-3
+                            ">
 
                             <span className="text-gray-500">
                                 Payment ID
                             </span>
 
                             <span className="
-                                font-semibold
-                                text-orange-400
-                                text-xs
-                                break-all
-                            ">
+                                    font-semibold
+                                    text-orange-400
+                                    text-xs
+                                    break-all
+                                ">
                                 {paymentId}
                             </span>
 
@@ -533,20 +533,20 @@ const Payment = () => {
 
 
                     <div className="
-                        mt-5
-                        text-green-400
-                        text-sm
-                        font-semibold
-                    ">
+                            mt-5
+                            text-green-400
+                            text-sm
+                            font-semibold
+                        ">
                         ✓ Payment Verified
                     </div>
 
 
                     <p className="
-                        text-gray-500
-                        text-xs
-                        mt-2
-                    ">
+                            text-gray-500
+                            text-xs
+                            mt-2
+                        ">
                         Your cart has been cleared.
                     </p>
 
@@ -564,42 +564,42 @@ const Payment = () => {
     return (
 
         <div className="
-            min-h-screen
-            bg-[#070d18]
-            flex
-            items-center
-            justify-center
-            px-4
-            py-8
-        ">
+                min-h-screen
+                bg-[#070d18]
+                flex
+                items-center
+                justify-center
+                px-4
+                py-8
+            ">
 
             <div className="
-                bg-[#151c2c]
-                border
-                border-gray-800
-                rounded-2xl
-                p-6
-                w-full
-                max-w-md
-                text-white
-            ">
+                    bg-[#151c2c]
+                    border
+                    border-gray-800
+                    rounded-2xl
+                    p-6
+                    w-full
+                    max-w-md
+                    text-white
+                ">
 
 
                 <h1 className="
-                    text-2xl
-                    font-bold
-                    text-center
-                ">
+                        text-2xl
+                        font-bold
+                        text-center
+                    ">
                     Payment
                 </h1>
 
 
                 <p className="
-                    text-center
-                    text-gray-500
-                    text-sm
-                    mt-1
-                ">
+                        text-center
+                        text-gray-500
+                        text-sm
+                        mt-1
+                    ">
                     Secure Razorpay Checkout
                 </p>
 
@@ -607,9 +607,9 @@ const Payment = () => {
                 {/* PRODUCTS */}
 
                 <div className="
-                    mt-6
-                    space-y-3
-                ">
+                        mt-6
+                        space-y-3
+                    ">
 
                     {cart?.items?.map(
                         (item) => (
@@ -617,30 +617,30 @@ const Payment = () => {
                             <div
                                 key={item._id}
                                 className="
-                                    flex
-                                    justify-between
-                                    gap-4
-                                    border-b
-                                    border-gray-800
-                                    pb-3
-                                "
+                                        flex
+                                        justify-between
+                                        gap-4
+                                        border-b
+                                        border-gray-800
+                                        pb-3
+                                    "
                             >
 
                                 <div className="min-w-0">
 
                                     <p className="
-                                        font-semibold
-                                        truncate
-                                    ">
+                                            font-semibold
+                                            truncate
+                                        ">
                                         {item.title}
                                     </p>
 
 
                                     <p className="
-                                        text-gray-400
-                                        text-sm
-                                        mt-1
-                                    ">
+                                            text-gray-400
+                                            text-sm
+                                            mt-1
+                                        ">
                                         ₹{item.price} × {item.qty}
                                     </p>
 
@@ -648,9 +648,9 @@ const Payment = () => {
 
 
                                 <p className="
-                                    font-bold
-                                    whitespace-nowrap
-                                ">
+                                        font-bold
+                                        whitespace-nowrap
+                                    ">
                                     ₹
                                     {Number(item.price) *
                                         Number(item.qty)}
@@ -667,24 +667,24 @@ const Payment = () => {
                 {/* TOTAL */}
 
                 <div className="
-                    flex
-                    justify-between
-                    items-center
-                    pt-5
-                ">
+                        flex
+                        justify-between
+                        items-center
+                        pt-5
+                    ">
 
                     <span className="
-                        text-gray-400
-                    ">
+                            text-gray-400
+                        ">
                         Total Amount
                     </span>
 
 
                     <span className="
-                        text-orange-500
-                        text-2xl
-                        font-bold
-                    ">
+                            text-orange-500
+                            text-2xl
+                            font-bold
+                        ">
                         ₹{subtotal}
                     </span>
 
@@ -697,17 +697,17 @@ const Payment = () => {
                     onClick={handlePayment}
                     disabled={loading}
                     className="
-                        w-full
-                        mt-6
-                        h-12
-                        rounded-lg
-                        bg-orange-500
-                        hover:bg-orange-600
-                        disabled:opacity-50
-                        disabled:cursor-not-allowed
-                        font-bold
-                        transition
-                    "
+                            w-full
+                            mt-6
+                            h-12
+                            rounded-lg
+                            bg-orange-500
+                            hover:bg-orange-600
+                            disabled:opacity-50
+                            disabled:cursor-not-allowed
+                            font-bold
+                            transition
+                        "
                 >
 
                     {loading
@@ -721,14 +721,14 @@ const Payment = () => {
                 {/* SECURITY */}
 
                 <div className="
-                    flex
-                    items-center
-                    justify-center
-                    gap-2
-                    mt-4
-                    text-xs
-                    text-gray-500
-                ">
+                        flex
+                        items-center
+                        justify-center
+                        gap-2
+                        mt-4
+                        text-xs
+                        text-gray-500
+                    ">
 
                     🔒 Secure payment powered by Razorpay
 
