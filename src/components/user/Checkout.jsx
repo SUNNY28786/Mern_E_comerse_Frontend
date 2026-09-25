@@ -23,7 +23,8 @@ const Checkout = () => {
         decreaseQty,
         removeFromCart,
         cartClear,
-        useraddress
+        useraddress,
+        url
     } = useContext(AppContext);
 
     // PAYMENT LOADING STATE
@@ -246,7 +247,7 @@ const Checkout = () => {
             // ==========================================
 
             const response = await fetch(
-                "http://localhost:1000/api/payment/checkout",
+                `${url}/payment/checkout`,
                 {
                     method: "POST",
                     headers: {
@@ -359,10 +360,9 @@ const Checkout = () => {
 
                         const verifyResponse =
                             await fetch(
-                                "http://localhost:1000/api/payment/verify",
+                                `${url}/payment/verify`,
                                 {
                                     method: "POST",
-
                                     headers: {
                                         "Content-Type":
                                             "application/json",
