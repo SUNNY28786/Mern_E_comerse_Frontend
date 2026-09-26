@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Showproduct from "./components/product/Showproduct";
 import ProductDetail from "./components/product/ProductDetail";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, } from "react-router-dom";
 import Navbar from "./components/user/Navbar";
 import Footer from "./components/user/Footer";
 import SearchProduct from "./components/product/SearchProduct";
@@ -19,12 +19,22 @@ import Payment from "./components/user/Payment";
 import OrderConformation from "./components/user/OrderConformation";
 
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 
 const App = () => {
   return (
 
     <Router>
+      <ScrollToTop />
       <Navbar />
       <ToastContainer />
       <Routes>
@@ -38,12 +48,7 @@ const App = () => {
         <Route path="/shipping" element={<Address />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/orderconformation" element={<OrderConformation />} />
-        <Route path="/payment" element={Payment}>
-
-
-        </Route>
-
-
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Footer />
     </Router>
