@@ -12,14 +12,12 @@ import { ChevronLeft, Tag, Zap } from "lucide-react";
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const { addToCart } = useContext(AppContext);
+  const { addToCart, url } = useContext(AppContext);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const api = await axios.get(
-          "http://localhost:1000/api/product/all"
-        );
+        const api = await axios.get(`${url}/product/all`)
 
         console.log(api.data.products);
 
